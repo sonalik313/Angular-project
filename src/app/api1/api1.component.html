@@ -1,0 +1,21 @@
+<p>api1 works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">website</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of url_data"> 
+        <th scope="row"></th>
+        <td>{{a.website}}</td>
+        <td>{{a.Name}}</td>
+        <td>{{a.address.city}}</td>
+      </tr>
+    
+    </tbody>
+  </table>

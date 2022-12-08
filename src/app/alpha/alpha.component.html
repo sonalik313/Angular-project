@@ -1,0 +1,25 @@
+<p>alpha works!</p>
+
+ 
+ 
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of my_std"> 
+        <th scope="row"></th>
+        <td>{{a.Id}}</td>
+        <td>{{a.Name}}</td>
+        <td>{{a.Dept}}</td>
+      </tr>
+    
+    </tbody>
+  </table>

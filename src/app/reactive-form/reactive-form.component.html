@@ -1,0 +1,40 @@
+<p>reactive-form works!</p>
+<form  [formGroup]="myForm" (ngSubmit)="show()">
+
+     
+    <div class="mb-3">
+      <label  class="form-label">id</label>
+      <input formControlName="id" class="form-control" id=" " aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Name</label>
+      <input formControlName="name" class="form-control" id=" ">
+    </div>
+    <h3 *ngIf="err['name'].invalid && err['name'].touched "> Enter name with minimum 3 charcters</h3>
+    <div>
+    <label class="form-label">dept</label>
+    <input formControlName="dept" class="form-control" id=" ">
+  </div>
+  <div>
+    <label  class="form-label">Salary</label>
+    <input formControlName="salary" type="number" class="form-control" id=" ">
+  </div>
+  <div>
+    <label  class="form-label">Contact no</label>
+    <input formControlName="Contact no" type="number" class="form-control" id=" ">
+    </div>
+  <div>
+    <label  class="form-label">location</label>
+    <input formControlName="location"  type= 'text' class="form-control">  
+  </div>
+  
+  <h3 *ngIf="err['email'].invalid && err['email'].touched "> Enter email with minimum 8 charcters</h3>
+  <div>
+    <label for="exampleInputPassword1" class="form-label">email</label>
+    <input formControlName="email"  type= 'email' class="form-control">  
+  </div>
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+
+  </form>

@@ -1,0 +1,14 @@
+<p>pro1 works!</p>
+<div style="display: flex; justify-content:space-evenly;flex-wrap:wrap">
+    <div class="card mb-3" style="width: 18rem;" *ngFor="let a of url_data"  (click)="onRou(a.id)">
+        <img class="card-img-top" src="{{a.image}}" width="250px" height="200px" alt="Card image cap"  >
+        <div class="card-body">
+          <h5 class="card-title">{{a.title}}</h5>
+          <!-- <h3>{{a.price}}</h3> -->
+          <h4>{{a.rating.rate}}</h4>
+          <!-- <p class="card-text"> {{a.description}}</p> -->
+          <a class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    </div>

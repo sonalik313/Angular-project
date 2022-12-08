@@ -1,0 +1,31 @@
+<p>login works!</p>
+<h1>learning 360 
+        {{myvar }}
+</h1>
+<h1>The square of {{num}} is {{num*4}}</h1>
+<h2>My name is {{name}} last name is {{last}}</h2>
+
+<input type="text" #name>
+<button (click)="fun1(name)"> SHOW </button>
+<h3>Hi {{user_nam}} welcome to Angular</h3>
+
+<input type="number" #us_num1>
+<button (click)="fun2(us_num1)">click</button>
+<h2> My number is {{user_num1}} </h2>
+
+<input type="number" #n1>
+<input type="number" #n2>
+<button (click)="fun3(n1,n2)">show</button> 
+<h2>My addition is {{res_sum}} </h2>
+
+<input type="text" [(ngModel)]="new1">
+
+<input [(ngModel)]='t1' placeholder="Enter height ">
+<input [(ngModel)]="t2" placeholder="Enter width">
+<img src="assets/images/car-wallpaper 3.jpg" [width]="t1" [height]="t2">
+<br>
+
+<input [(ngModel)]="u" placeholder="Enter name">
+<input [(ngModel)]="p" placeholder="Enter password">
+<button (click)="log()">click</button>
+<h1>{{msg}}</h1>

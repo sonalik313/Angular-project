@@ -1,0 +1,40 @@
+
+ <table class="table container table dark">
+
+        <tr class="bg-danger">
+   
+            <th scope="col">name</th>
+            <th scope="col">Department</th>
+            <th scope="col">location</th>
+            <th scope="col">email</th>
+            <th scope="col">contact</th>
+            <th scope="col">salary</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+            
+        </tr>
+
+
+    <tr *ngFor="let a of url_data">
+
+        <td>{{a.name}}</td>
+        <td>{{a.dept}}</td>
+        <td>{{a.location.city}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.contact}}</td>
+        <td>{{a.salary}}</td>
+        <td>
+            <button class="btn btn-primary m-lg-2">Delete</button>
+        </td>
+        <td>
+            <button class="btn btn-success">Edit</button>
+        </td>
+    </tr>
+
+
+</table> 
+
+<!-- <h3 *ngFor="let alp of url_data">
+    {{alp.name}}
+</h3> -->
+

@@ -1,0 +1,21 @@
+<p>pro2 works!</p>
+<h1>{{url_id}}</h1>
+<div *ngFor="let pr of url_data">
+    <div *ngIf="pr.id==url_id">
+        <div class="row">
+            <div class="col-8" mx-5 row row-cols-2>
+                <img [src]="pr.image" width="350px" height="500px" alt="">
+                <div class="  ">
+                    <h3>{{pr.price}}</h3>
+                    <h3>{{pr.category}}</h3>
+                    <p>rating{{pr.rating.rate}}</p>
+                    <h3>{{pr.title}}</h3>
+                    <h3>{{pr.description}}</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h2 *ngFor="let data of node_data">{{data.name}}  |  {{data.salary}} |  {{data.location}} |  {{data.town}}  |  {{data.dept}} </h2>

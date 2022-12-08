@@ -1,0 +1,45 @@
+<p>empdetails-post works!</p>
+<form  [formGroup]="myForm" (ngSubmit)="showPost()">
+
+     
+    <div class="mb-3">
+      <label for="exampleInputEmail1">id</label>
+      <input formControlName="id"  id=" " aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label >Name</label>
+      <input formControlName="name"  id=" ">
+    </div>
+    <h3 *ngIf="err['name'].invalid && err['name'].touched "> Enter name with minimum 3 charcters</h3>
+    <div>
+    <label >dept</label>
+    <input formControlName="dept"  id=" ">
+  </div>
+  <div>
+    <h3 *ngIf="err['email'].invalid && err['email'].touched "> Enter email with minimum 8 charcters</h3>
+    <div>
+      <label >email</label>
+      <input formControlName="email"  type= 'email' >  
+    </div>
+    <div>
+      <label >city</label>
+      <input formControlName="city" >  
+    </div>
+    <div>
+      <label >town</label>
+      <input formControlName="town"  >  
+    </div>
+    <div>
+    <label >Salary</label>
+    <input formControlName="salary" >
+  </div>
+    <label >contact</label>
+    <input formControlName="contact" type="number" >  
+  </div>
+  
+
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+
+  </form>

@@ -1,0 +1,9 @@
+<p>structure-ng-for works!</p>
+<div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let e of galary_db">
+        <img class="card-img-top" [src]="e.img_add" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{e.disc}}</p>
+        </div>
+    </div>
+</div>

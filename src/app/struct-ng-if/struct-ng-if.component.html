@@ -1,0 +1,19 @@
+<p>struct-ng-if works!</p>
+<input type="number" placeholder="Enter the Number" [(ngModel)]="num">
+<h1 *ngIf="num%2==0">{{num}}is even</h1>
+<h1 *ngIf="!(num%2==0)">{{num}} is odd</h1>
+
+<hr><hr>
+<h2 *ngIf="num%3==0 && num%5==0"> Both </h2> 
+<h2 *ngIf="num%3==0 && num%5!=0"> THREE </h2>
+<h2 *ngIf="num%3!=0 && num%5==0"> FIVE</h2>
+<h2 *ngIf="num%3!=0 && num%5!=0"> NONE</h2>
+
+<hr><hr>
+
+<h2 *ngIf="(num%3==0 && num%5==0)else block2">Both</h2>
+<ng-template #block2>
+    <h2 *ngIf="(num%3==0)">THREE</h2>
+    <h2 *ngIf="(num%5==0)">FIVE</h2>
+
+</ng-template>

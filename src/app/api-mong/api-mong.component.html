@@ -1,0 +1,94 @@
+<!-- <table class="table container">
+    <thead>
+        <tr class="bg-primary">
+            <th scope="col"></th>
+            <th scope="col">name</th>
+            <th scope="col">Department</th>
+            <th scope="col">location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of url_data">
+            <th scope="row"></th>
+            <td>{{a.name}}</td>
+            <td>{{a.dept}}</td>
+            <td>{{a.location.city}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<hr>
+<a type="button" class="btn btn-info btn-lg w-100 m-3" routerLink="/empdetails-post"> ADD New Employee </a>
+<table class="table container table dark">
+    <thead>
+        <tr class="bg-danger">
+            <th scope="col"></th>
+            <th scope="col">name</th>
+            <th scope="col">Department</th>
+            <th scope="col">location</th>
+            <th scope="col">email</th>
+            <th scope="col">contact</th>
+            <th scope="col">salary</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+            
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let a of url_mongo_data">
+        <th scope="row"></th>
+        <td>{{a.name}}</td>
+        <td>{{a.dept}}</td>
+        <td>{{a.location.city}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.contact}}</td>
+        <td>{{a.salary}}</td>
+        <td>
+            <button (click)="onDel(a._id)" class="btn btn-primary m-lg-2">Delete</button>
+        </td>
+        <td>
+            <button class="btn btn-success" (click)="onEdit(a._id)">Edit</button>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+<input type="text" class="w-75 m-3" placeholder="Enter a name of department" [(ngModel)]="searchme_name">
+<button class="btn btn-warning-outline" (click)="searchme()">Search</button>
+
+<table class="table container table dark">
+    <thead>
+        <tr class="bg-danger">
+            <th scope="col"></th>
+            <th scope="col">name</th>
+            <th scope="col">Department</th>
+            <th scope="col">location</th>
+            <th scope="col">email</th>
+            <th scope="col">contact</th>
+            <th scope="col">salary</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+            
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let a of search_mongo_data">
+        <th scope="row"></th>
+        <td>{{a.name}}</td>
+        <td>{{a.dept}}</td>
+        <td>{{a.location.city}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.contact}}</td>
+        <td>{{a.salary}}</td>
+        <td>
+            <button (click)="onDel(a._id)" class="btn btn-primary m-lg-2">Delete</button>
+        </td>
+        <td>
+            <button class="btn btn-success" (click)="onEdit(a._id)">Edit</button>
+        </td>
+    </tr>
+
+    </tbody>
+</table>

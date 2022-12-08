@@ -1,0 +1,11 @@
+<p>login2 works!</p>
+<h2 *ngFor="let a of arr_fruits"> {{a}}</h2>
+
+<!-- <h2 *ngFor="let emp of emp_db">{{emp.Empid }} {{emp.Empname}}  {{emp.Edept}}</h2> -->
+
+<input [(ngModel)]="d" placeholder="Enter the Department">
+<div *ngFor=" let a of emp_db">
+<h2 *ngIf="a.Edept==d">{{a.Edept}}{{a.Empname}} </h2></div>
+
+
+<button class="btn btn-warning">Test </button>
